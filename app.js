@@ -14,11 +14,15 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-app.set("views", )
+
 
 
 app.get("/", (req, res)=>{
   res.render("home", {content: homeStartingContent});
+})
+
+app.get("/about", (req, res) =>{
+  res.render("about", {about: aboutContent} );
 })
 
 
