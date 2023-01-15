@@ -37,8 +37,8 @@ app.get("/compose", (req, res)=>{
 
 
 app.post("/compose", (req,res)=>{
-  let publish1 = req.body.publish;
-  console.log(publish1);
+
+  console.log(req.body.postTitle, req.body.postContent);
 });
 
 
