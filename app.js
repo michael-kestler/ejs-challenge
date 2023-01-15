@@ -25,6 +25,10 @@ app.get("/about", (req, res) =>{
   res.render("about", {about: aboutContent} );
 })
 
+app.get("/contact", (req, res)=>{
+  res.render("contact", {contact: contactContent});
+})
+
 
 
 
