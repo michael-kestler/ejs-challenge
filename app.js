@@ -22,6 +22,7 @@ app.use(express.static("public"));
 
 app.get("/", (req, res)=>{
   res.render("home", {homeStartingContent: homeStartingContent});
+  console.log(posts);
 })
 
 app.get("/about", (req, res) =>{
@@ -46,7 +47,7 @@ app.post("/compose", (req,res)=>{
   }
 
   posts.push(post);
-  console.log(posts);
+  res.redirect("/");
 });
 
 
