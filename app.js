@@ -40,6 +40,10 @@ app.get("/compose", (req, res)=>{
   res.render("compose");
 })
 
+app.get('/posts/:test', (req, res) =>{
+    console.log(req.params.test);
+});
+
 
 
 
