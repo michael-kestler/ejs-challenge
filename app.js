@@ -40,8 +40,17 @@ app.get("/compose", (req, res)=>{
   res.render("compose");
 })
 
-app.get('/posts/:test', (req, res) =>{
-    console.log(req.params.test);
+app.get('/posts/:postName', (req, res) =>{
+    const requestedTitle = req.params.postName;
+
+    for(let i = 0; i<posts.length; i++){
+        if (posts[i].title === requestedTitle){
+            console.log("Match Found!");
+
+        }
+    }
+
+
 });
 
 
