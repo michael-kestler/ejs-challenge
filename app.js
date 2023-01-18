@@ -44,7 +44,8 @@ app.get('/posts/:postName', (req, res) =>{
     const requestedTitle = req.params.postName;
 
     posts.forEach((post)=>{
-        if (post.title === requestedTitle){
+        const storedTitle = post.title;
+        if (storedTitle === requestedTitle){
             console.log("Match Found!")
         }
     })
